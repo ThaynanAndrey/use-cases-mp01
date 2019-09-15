@@ -1,0 +1,79 @@
+systemName "V&V_FOOD"
+
+usecase "Comprar refeições" {
+	version "0.1" type "Creation" user "Grupo 5" date "15/09/2019"
+	actor cliente "Cliente"
+	
+	preCondition "O Cliente está logado no sistema",
+  			 	 "Existe uma lista de restaurantes cadastrados no Sistema",
+				 "Existe uma lista de restaurantes favoritos do Cliente",
+         		 "Existe uma lista de restaurantes em que o Cliente fez suas últimas compras",
+         		 "Existe uma lista de restaurantes em que o Cliente fez compras",
+         		 "Existe uma lista das últimas compras do Cliente",
+         		 "Cada restaurante possui um cardápio cadastrado",
+         		 "As opções de pagamento são dinheiro e cartão de crédito"
+	
+	basic {
+  		step 1 cliente "Abre a secao de refeicoes"
+		step 2 system "Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras"
+	    step 3 cliente "Escolhe opção de listar restaurantes" af[1]
+	    step 4 system "Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras"
+	    step 5 cliente "Escolhe a lista com todos os restaurantes" af[2,3]
+	    step 6 system "Apresenta os restaurantes da lista de todos os restaurantes"
+	    step 7 cliente "Escolhe um restaurante"
+	    step 8 system "Apresenta o cardápio do restaurante escolhido pelo Cliente"
+	    step 9 cliente "Escolhe refeições do cardapio"
+	    step 10 system "Apresenta mensagem de refeições adicionadas com sucesso" ef[1]
+	    step 11 cliente "Seleciona o botão do carrinho de compras"
+	    step 12 system "Apresenta o carrinho de compras para as refeições selecionadas" ef[2]
+	    step 13 cliente "Pede para realizar o pagamento"
+	    step 14 system "Apresenta formas de pagamento"
+	    step 15 cliente "Escolhe o dinheiro como forma de pagamento" af[4,5]
+	    step 16 system "Apresenta mensagem de compra realizada com sucesso"
+	}
+  
+  	alternative 1 "Listar ultimas compras" {
+  		step 1 cliente "Escolhe a opção de listar as últimas compras"
+  		step 2 system "Mostrar a lista das ultimas refeicoes compradas"
+  		step 3 cliente "Usuário escolhe refeição" bs 10	
+  	}
+  
+  	alternative 2 "Listar restaurantes favoritos" {
+  		step 1 cliente "Escolhe a lista dos restaurantes favoritos"
+    	step 2 system "Apresenta a lista dos restaurantes favoritos"
+    	step 3 cliente "Escolhe um restaurante favorito" bs 8
+  	}
+  
+  	alternative 3 "Listar restaurantes com as últimas compras" {
+  		step 1 cliente "Escolhe a lista dos restaurantes onde fez as últimas compras"
+    	step 2 system "Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras"
+    	step 3 cliente "Escolhe um dos restaurante onde fez as últimas compras" bs 8
+  	}
+  
+	alternative 4 "Cancelar compra" {
+		step 1 cliente "Decide cancelar compra"
+  		step 2 system "Limpa o carrinho de compras e apresenta mensagem de compra cancelada com sucesso"
+  		step 3 cliente "Selecione botão 'Ok'" bs 2
+  	}
+  
+	alternative 5 "Realizar pagamento com cartão de crédito" {
+	  	step 1 cliente "Escolhe o cartão de crédito como forma de pagamento"
+	    step 2 system "Pede as informações do cartão de crédito"
+	    step 3 cliente "Insere as informações do cartão de crédito"
+	    step 4 system "Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso" ef[3]
+  	}
+	
+	exception 1 "Refeicao nao disponivel" {
+		step 1 system "Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio" bs 9
+	}
+	  
+	exception 2 "Restaurante fechado" {
+		step 1 system "Notifica o Cliente que o restaurante das refeicoes selecionadas esta fechado e solicita que o Cliente escolha outro restaurante" bs 1
+	}
+	  
+	exception 3 "Compra nao autorizada pela operadora" {
+		step 1 system "Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento" bs 15
+	}
+	
+	postCondition "Cliente realiza compra com sucesso"
+}

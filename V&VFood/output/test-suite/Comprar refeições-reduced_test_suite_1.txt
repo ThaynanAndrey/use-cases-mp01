@@ -1,0 +1,450 @@
+/**
+ *	 >>> REDUCED TEST SUITE (Greedy Heuristic - Transition Coverage) <<<
+ *
+ * - Calculated Maximum Test Case Size: 10
+ *
+ * - Equation:
+ *
+ *     maxTestCaseSize = (b + max(a, e))/2
+ * 
+ *     where:
+ *       b (Total of Basic Flow Steps): 16
+ *       a (Total of Steps from Greater Alternative Flow): 4
+ *       e (Total of Steps from Greater Exception Flow): 1
+ *
+ * - Total of Generated Test Cases: 35
+ */
+
+Test Case: 1
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 2
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Notifica o Cliente que o restaurante das refeicoes selecionadas esta fechado e solicita que o Cliente escolha outro restaurante
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 3
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 4
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 5
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 6
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 7
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 8
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 9
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 10
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 11
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 12
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 13
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 14
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 15
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 16
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 17
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 18
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 19
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 20
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 21
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 22
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 23
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 24
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 25
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 26
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 27
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 28
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 29
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes onde fez as últimas compras -> SYSTEM Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+Cliente Escolhe um dos restaurante onde fez as últimas compras -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 30
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista dos restaurantes favoritos -> SYSTEM Apresenta a lista dos restaurantes favoritos
+Cliente Escolhe um restaurante favorito -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 31
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 32
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+
+Test Case: 33
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe a opção de listar as últimas compras -> SYSTEM Mostrar a lista das ultimas refeicoes compradas
+Cliente Usuário escolhe refeição -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+
+Test Case: 34
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o cartão de crédito como forma de pagamento -> SYSTEM Pede as informações do cartão de crédito
+Cliente Insere as informações do cartão de crédito -> SYSTEM Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
+
+Test Case: 35
+Precondition: O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+Cliente Abre a secao de refeicoes -> SYSTEM Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+Cliente Escolhe opção de listar restaurantes -> SYSTEM Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+Cliente Escolhe a lista com todos os restaurantes -> SYSTEM Apresenta os restaurantes da lista de todos os restaurantes
+Cliente Escolhe um restaurante -> SYSTEM Apresenta o cardápio do restaurante escolhido pelo Cliente
+Cliente Escolhe refeições do cardapio -> SYSTEM Apresenta mensagem de refeições adicionadas com sucesso
+Cliente Seleciona o botão do carrinho de compras -> SYSTEM Apresenta o carrinho de compras para as refeições selecionadas
+Cliente Pede para realizar o pagamento -> SYSTEM Apresenta formas de pagamento
+Cliente Escolhe o dinheiro como forma de pagamento -> SYSTEM Apresenta mensagem de compra realizada com sucesso
+Postcondition: Cliente realiza compra com sucesso
+

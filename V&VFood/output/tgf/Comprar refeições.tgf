@@ -1,0 +1,68 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+#
+1 2 [c] O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+2 3 [s] Cliente Abre a secao de refeicoes
+3 4 [e] system Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+4 5 [s] Cliente Escolhe opção de listar restaurantes
+5 6 [e] system Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+6 7 [s] Cliente Escolhe a lista com todos os restaurantes
+7 8 [e] system Apresenta os restaurantes da lista de todos os restaurantes
+8 9 [s] Cliente Escolhe um restaurante
+9 10 [e] system Apresenta o cardápio do restaurante escolhido pelo Cliente
+10 11 [s] Cliente Escolhe refeições do cardapio
+11 12 [e] system Apresenta mensagem de refeições adicionadas com sucesso
+12 13 [s] Cliente Seleciona o botão do carrinho de compras
+13 14 [e] system Apresenta o carrinho de compras para as refeições selecionadas
+14 15 [s] Cliente Pede para realizar o pagamento
+15 16 [e] system Apresenta formas de pagamento
+16 17 [s] Cliente Escolhe o dinheiro como forma de pagamento
+17 18 [e] system Apresenta mensagem de compra realizada com sucesso
+18 19 [c] Cliente realiza compra com sucesso
+4 20 [s] Cliente Escolhe a opção de listar as últimas compras
+20 21 [e] system Mostrar a lista das ultimas refeicoes compradas
+21 11 [s] Cliente Usuário escolhe refeição
+6 22 [s] Cliente Escolhe a lista dos restaurantes favoritos
+22 23 [e] system Apresenta a lista dos restaurantes favoritos
+23 9 [s] Cliente Escolhe um restaurante favorito
+6 24 [s] Cliente Escolhe a lista dos restaurantes onde fez as últimas compras
+24 25 [e] system Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+25 9 [s] Cliente Escolhe um dos restaurante onde fez as últimas compras
+11 10 [e] system Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+13 2 [e] system Notifica o Cliente que o restaurante das refeicoes selecionadas esta fechado e solicita que o Cliente escolha outro restaurante
+16 26 [s] Cliente Decide cancelar compra
+26 27 [e] system Limpa o carrinho de compras e apresenta mensagem de compra cancelada com sucesso
+27 3 [s] Cliente Selecione botão 'Ok'
+16 28 [s] Cliente Escolhe o cartão de crédito como forma de pagamento
+28 29 [e] system Pede as informações do cartão de crédito
+29 30 [s] Cliente Insere as informações do cartão de crédito
+30 19 [e] system Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+30 19 [e] system Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento

@@ -1,0 +1,142 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
+41 41
+42 42
+43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+49 49
+50 50
+51 51
+52 52
+53 53
+54 54
+55 55
+56 56
+57 57
+58 58
+59 59
+60 60
+61 61
+62 62
+63 63
+64 64
+65 65
+66 66
+67 67
+#
+1 31 conditions
+31 2 O Cliente está logado no sistema. Existe uma lista de restaurantes cadastrados no Sistema. Existe uma lista de restaurantes favoritos do Cliente. Existe uma lista de restaurantes em que o Cliente fez suas últimas compras. Existe uma lista de restaurantes em que o Cliente fez compras. Existe uma lista das últimas compras do Cliente. Cada restaurante possui um cardápio cadastrado. As opções de pagamento são dinheiro e cartão de crédito
+2 32 steps
+32 3 Cliente Abre a secao de refeicoes
+3 33 expected_results
+33 4 system Apresenta a tela principal com as opções de selecionar restaurantes ou últimas compras
+4 34 steps
+34 5 Cliente Escolhe opção de listar restaurantes
+5 35 expected_results
+35 6 system Apresenta a opcao de escolha de lista de todos os restaurantes, restaurantes favoritos e restaurantes com as últimas compras
+6 36 steps
+36 7 Cliente Escolhe a lista com todos os restaurantes
+7 37 expected_results
+37 8 system Apresenta os restaurantes da lista de todos os restaurantes
+8 38 steps
+38 9 Cliente Escolhe um restaurante
+9 39 expected_results
+39 10 system Apresenta o cardápio do restaurante escolhido pelo Cliente
+10 40 steps
+40 11 Cliente Escolhe refeições do cardapio
+11 41 expected_results
+41 12 system Apresenta mensagem de refeições adicionadas com sucesso
+12 42 steps
+42 13 Cliente Seleciona o botão do carrinho de compras
+13 43 expected_results
+43 14 system Apresenta o carrinho de compras para as refeições selecionadas
+14 44 steps
+44 15 Cliente Pede para realizar o pagamento
+15 45 expected_results
+45 16 system Apresenta formas de pagamento
+16 46 steps
+46 17 Cliente Escolhe o dinheiro como forma de pagamento
+17 47 expected_results
+47 18 system Apresenta mensagem de compra realizada com sucesso
+18 48 conditions
+48 19 Cliente realiza compra com sucesso
+4 49 steps
+49 20 Cliente Escolhe a opção de listar as últimas compras
+20 50 expected_results
+50 21 system Mostrar a lista das ultimas refeicoes compradas
+21 51 steps
+51 11 Cliente Usuário escolhe refeição
+6 52 steps
+52 22 Cliente Escolhe a lista dos restaurantes favoritos
+22 53 expected_results
+53 23 system Apresenta a lista dos restaurantes favoritos
+23 54 steps
+54 9 Cliente Escolhe um restaurante favorito
+6 55 steps
+55 24 Cliente Escolhe a lista dos restaurantes onde fez as últimas compras
+24 56 expected_results
+56 25 system Apresenta a lista dos restaurantes em que o cliente realizou as suas ultimas compras
+25 57 steps
+57 9 Cliente Escolhe um dos restaurante onde fez as últimas compras
+11 58 expected_results
+58 10 system Notifica o Cliente que a refeicao nao esta disponivel e solicita a alteracao do cardapio
+13 59 expected_results
+59 2 system Notifica o Cliente que o restaurante das refeicoes selecionadas esta fechado e solicita que o Cliente escolha outro restaurante
+16 60 steps
+60 26 Cliente Decide cancelar compra
+26 61 expected_results
+61 27 system Limpa o carrinho de compras e apresenta mensagem de compra cancelada com sucesso
+27 62 steps
+62 3 Cliente Selecione botão 'Ok'
+16 63 steps
+63 28 Cliente Escolhe o cartão de crédito como forma de pagamento
+28 64 expected_results
+64 29 system Pede as informações do cartão de crédito
+29 65 steps
+65 30 Cliente Insere as informações do cartão de crédito
+30 66 expected_results
+66 19 system Envia a solicitacao de compra para a operadora do cartao de credito e apresenta mensagem de compra realizada com sucesso
+30 67 expected_results
+67 19 system Notifica o cliente que a compra nao foi autorizada pela operadora e solicita a escolha de uma nova forma de pagamento
