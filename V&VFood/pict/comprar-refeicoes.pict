@@ -2,29 +2,29 @@
 # Modela as categorias das variaveis envolvidas na funcionalidade de comprar refeicoes do V&V Food
 #
 
-Cliente-cadastrado: 			Sim, Nao
+Cliente-cadastrado:             Sim, Nao
 
-Pagamento: 						Dinheiro, Cartao
+Pagamento:                      Dinheiro, Cartao
 
-Autorizacao-pagamento: 			Autorizado, Nao-autorizado
+Autorizacao-pagamento:          Autorizado, Nao-autorizado
 
-Restaurantes-cadastrados:		0, 1, 2
+Restaurantes-cadastrados:       0, 1, 2
 
-Restaurantes-abertos:			0, 1, 2
+Restaurantes-abertos:           0, 1, 2
 
-Refeicoes-restaurantes:			0, 1, 2
+Refeicoes-restaurantes:         0, 1, 2
 
-Refeicoes-dia-restaurantes:		0, 1, 2
+Refeicoes-dia-restaurantes:     0, 1, 2
 
-Restaurantes-favoritos:			0, 1, 2
+Restaurantes-favoritos:         0, 1, 2
 
-Compras-recentes:				0, 1, 2
+Compras-recentes:               0, 1, 2
 
-Compras-recentes-validade:		Valida, Invalida
+Compras-recentes-validade:      Valida, Invalida
 
-Refeicoes-escolhidas:			0, 1, 2
+Refeicoes-escolhidas:           0, 1, 2
 
-Refeicoes-escolhidas-validade:	Valida, Invalida
+Refeicoes-escolhidas-validade:  Valida, Invalida
 
 # Constraints
 
