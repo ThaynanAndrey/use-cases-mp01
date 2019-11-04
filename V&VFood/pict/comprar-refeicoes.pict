@@ -1,0 +1,46 @@
+#
+# Modela as categorias das variaveis envolvidas na funcionalidade de comprar refeicoes do V&V Food
+#
+
+Cliente-cadastrado:             Sim, Nao
+
+Pagamento:                      Dinheiro, Cartao
+
+Autorizacao-pagamento:          Autorizado, Nao-autorizado
+
+Restaurantes-cadastrados:       0, 1, 2
+
+Restaurantes-abertos:           0, 1, 2
+
+Refeicoes-restaurantes:         0, 1, 2
+
+Refeicoes-dia-restaurantes:     0, 1, 2
+
+Restaurantes-favoritos:         0, 1, 2
+
+Compras-recentes:               0, 1, 2
+
+Compras-recentes-validade:      Valida, Invalida
+
+Refeicoes-escolhidas:           0, 1, 2
+
+Refeicoes-escolhidas-validade:  Valida, Invalida
+
+# Constraints
+
+IF [Pagamento] = "Dinheiro" THEN [Autorizacao-pagamento] = "Autorizado";
+
+IF [Restaurantes-abertos] = 0 THEN [Compras-recentes-validade] = "Invalida" AND [Refeicoes-escolhidas-validade] = "Invalida";
+
+IF [Refeicoes-dia-restaurantes] = 0 THEN [Compras-recentes-validade] = "Invalida" AND [Refeicoes-escolhidas-validade] = "Invalida";
+
+[Restaurantes-abertos] <= [Restaurantes-cadastrados];
+
+[Restaurantes-favoritos] <= [Restaurantes-cadastrados];
+
+[Refeicoes-dia-restaurantes] <= [Refeicoes-restaurantes];
+
+# Especificando de Casos de Erro
+
+IF [Cliente-cadastrado] = "Nao" 
+THEN [Pagamento] = "Dinheiro" AND [Autorizacao-pagamento] = "Autorizado" AND [Restaurantes-cadastrados] = 1 AND [Restaurantes-abertos] = 1 AND [Refeicoes-restaurantes] = 1 AND [Refeicoes-dia-restaurantes] = 1 AND [Restaurantes-favoritos] = 1 AND [Compras-recentes] = 0 AND [Compras-recentes-validade] = "Valida" AND [Refeicoes-escolhidas] = 1 AND [Refeicoes-escolhidas-validade] = "Valida";
